@@ -1,4 +1,4 @@
-from calculator import add, subtract, multiply
+from calculator import add, subtract, multiply, divide
 
 
 def test_add():
@@ -21,3 +21,12 @@ def test_multiply():
     assert multiply(0, 5) == 0
     assert multiply(-1, -1) == 1
     assert multiply(2, -3) == -6
+
+
+def test_divide():
+    assert divide(6, 3) == 2
+    assert divide(0, 1) == 0
+    assert divide(-6, 3) == -2
+    assert divide(6, -3) == -2
+    assert divide(3, 0) == "Error: Division by zero"
+    assert divide(-3, 0) == "Error: Division by zero"
